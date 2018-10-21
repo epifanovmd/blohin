@@ -1,35 +1,27 @@
 import * as React from "react";
+import Carousel from 'nuka-carousel';
+
+import Header from "./Header";
+import Services from "../component/Services";
 
 import "./App.css";
+import Price from './Price';
 
 class App extends React.Component {
   public render() {
     return (
       <div>
         <div className="container">
-          <nav className="navbar navbar-light bg-light">
-            <a className="navbar-brand" href="#">
-              <img
-                src="/docs/4.1/assets/brand/bootstrap-solid.svg"
-                width="30"
-                height="30"
-                className="d-inline-block align-top"
-                alt=""
-              />
-              Logo
-            </a>
-
-            <div>Работаем каждый день, без выходных c 7:00 до 23:00!</div>
-
-            <div>
-              <a href="tel:+74959222377">
-                +7 (495) <strong>922-23-77</strong>
-              </a>
-            </div>
-          </nav>
-
-          <section className="row">
-            <div className="col-4">
+          <Header />
+          <Carousel
+          autoplay={true}
+          >
+        <img src={require("../image/imgHead.png")} />
+        <img src="http://placehold.it/1000x400/ffffff/c0392b/&text=slide2" />
+        <img src="http://placehold.it/1000x400/ffffff/c0392b/&text=slide3" />
+      </Carousel>
+          <div className="pt-3 row">
+            <div className="col-sm-4 text-center">
               <img
                 src="http://compline.md/design/compline/i/img_02.png"
                 alt=""
@@ -41,7 +33,7 @@ class App extends React.Component {
               </p>
             </div>
 
-            <div className="col-4">
+            <div className="col-sm-4 text-center">
               <img
                 src="http://compline.md/design/compline/i/img_03.png"
                 alt=""
@@ -52,7 +44,7 @@ class App extends React.Component {
                 нас лучшие цены.
               </p>
             </div>
-            <div className="col-4">
+            <div className="col-sm-4 text-center">
               <img
                 src="http://compline.md/design/compline/i/img_04.png"
                 alt=""
@@ -63,8 +55,11 @@ class App extends React.Component {
                 гарантия до 6 месцев.
               </p>
             </div>
-          </section>
+          </div>
         </div>
+
+        <Services />
+        <Price/>
       </div>
     );
   }

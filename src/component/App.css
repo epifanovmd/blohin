@@ -6,3 +6,8 @@ body {
   background: #eaeaea;
   position: relative;
 }
+
+body{
+
+  background: linear-gradient(#e4f3f8, #ffffff), white;
+}
