@@ -3,7 +3,7 @@ import * as React from "react";
 class Services extends React.Component {
   public render() {
     return (
-      <div>
+      <div className="container">
         <nav aria-label="breadcrumb">
           <ol className="breadcrumb">
             <li className="breadcrumb-item active" aria-current="page">

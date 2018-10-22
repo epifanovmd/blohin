@@ -1,65 +1,21 @@
 import * as React from "react";
-import Carousel from 'nuka-carousel';
-
-import Header from "./Header";
-import Services from "../component/Services";
 
 import "./App.css";
-import Price from './Price';
+import Header from "./Header";
+import Content from "./Content";
+import Services from "../component/Services";
+import Price from "./Price";
+import Footer from "./Footer";
 
 class App extends React.Component {
   public render() {
     return (
-      <div>
-        <div className="container">
-          <Header />
-          <Carousel
-          autoplay={true}
-          >
-        <img src={require("../image/imgHead.png")} />
-        <img src="http://placehold.it/1000x400/ffffff/c0392b/&text=slide2" />
-        <img src="http://placehold.it/1000x400/ffffff/c0392b/&text=slide3" />
-      </Carousel>
-          <div className="pt-3 row">
-            <div className="col-sm-4 text-center">
-              <img
-                src="http://compline.md/design/compline/i/img_02.png"
-                alt=""
-              />
-              <h3>Оперативность</h3>
-              <p>
-                Мастер у вас в течении 1 часа. <br />
-                Вызов на дом - бесплатный.
-              </p>
-            </div>
-
-            <div className="col-sm-4 text-center">
-              <img
-                src="http://compline.md/design/compline/i/img_03.png"
-                alt=""
-              />
-              <h3>Честные цены</h3>
-              <p>
-                Нас рекомендуют друзьям, потому что у <br />
-                нас лучшие цены.
-              </p>
-            </div>
-            <div className="col-sm-4 text-center">
-              <img
-                src="http://compline.md/design/compline/i/img_04.png"
-                alt=""
-              />
-              <h3>Гарантия качества</h3>
-              <p>
-                На все виды услуг предоставляется <br />
-                гарантия до 6 месцев.
-              </p>
-            </div>
-          </div>
-        </div>
-
+      <div className="container">
+        <Header />
+        <Content />
         <Services />
-        <Price/>
+        <Price />
+        <Footer />
       </div>
     );
   }
