@@ -7,7 +7,35 @@ body {
   position: relative;
 }
 
-body{
-
+body {
   background: linear-gradient(#e4f3f8, #ffffff), white;
+}
+/* Спецификация */
+
+body {
+  font-family: "PT Sans", sans-serif;
+}
+
+ul,
+li {
+  display: block;
+  padding: 0;
+  margin: 0;
+}
+
+h2 {
+  text-align: center;
+}
+.menu {
+  margin-top: 8px;
+}
+
+.menu__item {
+  margin: 0 30px;
+}
+
+.menu__item a {
+  font-size: 22px;
+  font-weight: 600;
+  color: #000;
 }

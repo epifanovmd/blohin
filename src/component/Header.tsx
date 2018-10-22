@@ -1,4 +1,5 @@
 import * as React from "react";
+import { Link } from "react-scroll";
 
 class Header extends React.Component {
   public render() {
@@ -14,15 +15,59 @@ class Header extends React.Component {
             без выходных c 7:00 до 23:00!
           </div>
 
-          <div className="align-self-center">
-            <i className="fa fa-phone fa-2x" aria-hidden="true" />
-          </div>
+          <nav>
+            <ul className="menu d-flex animated fadeInDown">
+              <li className="menu__item">
+                <Link
+                  activeClass="active"
+                  to="Services"
+                  spy={true}
+                  smooth={true}
+                  offset={0}
+                  duration={1000}
+                >
+                  <a href="#">Services</a>
+                </Link>
+              </li>
+              <li className="menu__item">
+                <Link
+                  activeClass="active"
+                  to="Prices"
+                  spy={true}
+                  smooth={true}
+                  offset={0}
+                  duration={1000}
+                >
+                  <a href="#">Prices</a>
+                </Link>
+              </li>
+            </ul>
+          </nav>
 
-          <div className="p-2 align-self-center">
-            <a href="tel:+74959222377">
-              +7 (495) <strong>922-23-77</strong>
-            </a>
-          </div>
+          {/* <div className="menu">
+            <Link
+              className="mr-5"
+              activeClass="active"
+              to="Services"
+              spy={true}
+              smooth={true}
+              offset={0}
+              duration={1000}
+            >
+              <button>Services</button>
+            </Link>
+            <Link
+              className="mr-5"
+              activeClass="active"
+              to="Prices"
+              spy={true}
+              smooth={true}
+              offset={0}
+              duration={1000}
+            >
+              <button>Prices</button>
+            </Link>
+          </div> */}
         </div>
       </div>
     );

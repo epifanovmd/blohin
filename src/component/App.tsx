@@ -1,6 +1,8 @@
 import * as React from "react";
 
 import "./App.css";
+import "./Animate.css"
+
 import Header from "./Header";
 import Content from "./Content";
 import Services from "../component/Services";
@@ -11,7 +13,7 @@ class App extends React.Component {
   public render() {
     return (
       <div className="container">
-        <Header />
+        <Header/>
         <Content />
         <Services />
         <Price />
